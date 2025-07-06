@@ -1,3 +1,4 @@
+import 'package:bookly/features/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -18,7 +19,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     animationController = AnimationController(
       vsync: this,
-      duration: Duration( seconds: 2),
+      duration: Duration(seconds: 2),
     );
 
     slidingAnimation = Tween(
@@ -42,22 +43,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset("assets/images/Logo.png"),
-        AnimatedBuilder(
-          animation: slidingAnimation,
-          builder: (BuildContext context, Widget? child) {
-            return SlideTransition(
-              position: slidingAnimation,
-              child: Text(
-                "Read Free Books",
-                style: TextStyle(),
-                textAlign: TextAlign.center,
-              ),
-            );
-          },
-        ),
+        SlidingText(slidingAnimation: slidingAnimation),
       ],
     );
   }
-
-
 }
+
