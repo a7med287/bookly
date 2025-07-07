@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/assets.dart';
 
-class CustomListViewItem extends StatelessWidget {
-  const CustomListViewItem({super.key});
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * .27,
-      child:  AspectRatio(
-        aspectRatio: 1.8 / 3,
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.fill,
-              image: AssetImage(AssetsData.testImage),
-            ),
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.green,
+    return AspectRatio(
+      aspectRatio: 1.8 / 3,
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: AssetImage(AssetsData.testImage),
           ),
+          borderRadius: BorderRadius.circular(16),
+          color: Colors.green,
         ),
       ),
     );
