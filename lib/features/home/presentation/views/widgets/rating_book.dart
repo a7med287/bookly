@@ -14,7 +14,7 @@ class RatingBook extends StatelessWidget {
         const Icon(
           FontAwesomeIcons.solidStar,
           color: Color(0xffffdd4f),
-          size: 16,
+          size: 15,
         ),
         const SizedBox(width: 6.3),
         Text(
