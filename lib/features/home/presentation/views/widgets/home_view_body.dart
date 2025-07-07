@@ -1,5 +1,6 @@
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'best_seller_list_view_item.dart';
 import 'custom_app_bar.dart';
 import 'featured_list_view.dart';
 
@@ -9,19 +10,19 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16),
+      padding: EdgeInsets.only(right: 16,left: 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           CustomAppBar(),
           FeaturedListView(),
           SizedBox(height: 45,),
-          Padding(
-            padding: const EdgeInsets.only(left: 16.0),
-            child: Text("Best Seller", style: Styles.titleMeduim),
-          ),
+          Text("Best Seller", style: Styles.titleMeduim),
+          SizedBox(height: 18,),
+          BestSellerListViewItem(),
         ],
       ),
     );
   }
 }
+
