@@ -1,0 +1,18 @@
+import 'package:flutter/material.dart';
+import '../../../../home/presentation/views/widgets/best_seller_list_view_item.dart';
+
+class CustomSearchListView extends StatelessWidget {
+  const CustomSearchListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ListView.builder(itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.only(bottom:12),
+          child: const BestSellerListViewItem(),
+        );
+      },),
+    );
+  }
+}
