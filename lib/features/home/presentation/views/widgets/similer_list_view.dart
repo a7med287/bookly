@@ -13,7 +13,7 @@ class SimilerBooksListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(right: 8.0),
-            child: CustomBookImage(),
+            child: CustomBookImage(urlImage: 'https://i.pinimg.com/1200x/74/d4/f6/74d4f6083a31a0e57675adf452cc6b27.jpg',),
           );
         },
       ),
