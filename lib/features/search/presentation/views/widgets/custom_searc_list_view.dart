@@ -10,7 +10,8 @@ class CustomSearchListView extends StatelessWidget {
       child: ListView.builder(itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(bottom:12),
-          child: const BestSellerListViewItem(),
+          child: Text("replace"),
+          // child:  BestSellerListViewItem(bookModel: null,),
         );
       },),
     );
