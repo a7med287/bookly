@@ -1,6 +1,6 @@
 import 'package:bookly/core/widgets/cusrom_error_message.dart';
-import 'package:bookly/core/widgets/custom_loading_indicator.dart';
 import 'package:bookly/features/home/presentation/view_models/newest_books_cubit/newest_books_cubit.dart';
+import 'package:bookly/features/home/presentation/views/widgets/custom_newest_loading.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,7 +30,9 @@ class BestSellerSliverList extends StatelessWidget {
             child: CustomErrorMessage(errMessage: state.errorMessage),
           );
         } else {
-          return SliverToBoxAdapter(child: CustomLoadingIndicator());
+          return SliverToBoxAdapter(child: SizedBox(
+              height: 150,
+              child: CustomNewestLoading()));
         }
       },
     );

@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_routers.dart';
 import '../../../../../core/widgets/cusrom_error_message.dart';
-import '../../../../../core/widgets/custom_loading_indicator.dart';
+import 'customFeaturedLoading.dart';
 import 'custom_list_view_item.dart';
 
 class FeaturedListView extends StatelessWidget {
@@ -26,11 +26,18 @@ class FeaturedListView extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 14),
                   child: GestureDetector(
                     onTap: () {
-                      GoRouter.of(context).push(AppRouter.kBookDetailsView, extra: state.booksList[index]);
+                      GoRouter.of(context).push(
+                        AppRouter.kBookDetailsView,
+                        extra: state.booksList[index],
+                      );
                     },
                     child: CustomBookImage(
                       urlImage:
-                          state.booksList[index].volumeInfo.imageLinks.thumbnail,
+                          state
+                              .booksList[index]
+                              .volumeInfo
+                              .imageLinks
+                              .thumbnail,
                     ),
                   ),
                 );
@@ -40,7 +47,17 @@ class FeaturedListView extends StatelessWidget {
         } else if (state is FeaturedBooksFailure) {
           return CustomErrorMessage(errMessage: state.errorMessage);
         } else {
-          return CustomLoadingIndicator();
+          return SizedBox(
+            height: MediaQuery.of(context).size.height * .27,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                CustomFeaturedLoading(),
+                CustomFeaturedLoading(),
+                CustomFeaturedLoading(),
+              ],
+            ),
+          );
         }
       },
     );
