@@ -27,9 +27,9 @@ Bookly is a modern, responsive Flutter app for discovering and reading books fet
 
 ## 📸 Screenshots
 
-| Splash View | Home View (Loading State) | Home View | Details View |
+| Splash View | Home View | Details View |
 |-------------|----------|------------|
-| ![Splash](assets/screenshots/splash_view.jpg) | ![Home Loading](assets/screenshots/home_loading.jpg) | ![Home](assets/screenshots/home_view.jpg) | ![Details](assets/screenshots/details_view.jpg) |
+| ![Splash](assets/screenshots/splash_view.jpg) | ![Home](assets/screenshots/home_view.jpg) | ![Details](assets/screenshots/details_view.jpg) |
 
 ---
 
