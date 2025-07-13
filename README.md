@@ -98,9 +98,8 @@ This app uses the [Google Books API](https://developers.google.com/books) to fet
 ## 👤 Author
 
 **Ahmed Rizk**  
-[GitHub](https://github.com/a7med287)
-[Linkedin](https://www.linkedin.com/in/ahmed-rezk-966985322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)  
-<!-- Optional: Add LinkedIn or email -->
+- [GitHub](https://github.com/a7med287)
+- [Linkedin](https://www.linkedin.com/in/ahmed-rezk-966985322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)  
 
 ---
 
@@ -111,7 +110,3 @@ This app uses the [Google Books API](https://developers.google.com/books) to fet
 - 🌐 Dark mode & localization
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
